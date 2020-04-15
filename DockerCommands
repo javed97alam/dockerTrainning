@@ -1,0 +1,105 @@
+
+
+when we restart a Vm docker will come up but not the container.
+
+	systemctl enable docker // This command is used to enable docker start on VM is up
+
+	docker container run -dt --name mycontainer4 --restart always -p 8084:80  nginx // will bring container up on VM restart.
+
+
+Delete all docker images
+
+	docker container stop $(docker ps -qa)
+
+	docker container rm $(docker ps -qa)
+
+
+see the docker logs ````````````````````````````````````````````````````````````````````````````````````																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+		docker logs mycontainer2
+
+	docker system df -v
+
+CHanging default command
+	docker container run -dt --name mycontainer4 -p 8084:80  nginx sleep 20
+
+// so it will sleep for 20 sec and then container terminates
+
+login into container
+
+     	docker container exec -it mycontainer1 bash
+  
+	service nginx status
+
+         
+  	service nginx stop@
+
+
+remove docker image
+
+	docker rm cranky_austin
+
+start or stop container
+
+	docker container stop/start mycontainer4
+
+container without port shown
+	docker container run -dt --name mycontainer4  nginx
+
+container with port
+	docker container run -dt --name mycontainer3 -p 8082:80  nginx
+
+kill container
+	docker container kill mycontainer
+
+
+	docker container run -dt --name mycontainer  nginx
+	docker container run -dt -name mycontainer  nginx
+	docker run nginx
+	docker container run nginx
+
+	docker ps -a
+	docker ps             // running instance
+
+to see docker iamge
+	docker images
+
+Downloading image
+	docker pull nginx
+
+Login to dockerhub via terminal 
+docker login
+
+
+
+Installing docker in ubuntu
+
+apt-get update
+apt-get remove docker-engine docker.io
+apt install docker.io
+apt systemctl start docker
+systemctl start docker
+systemctl enable docker
+docker --version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
