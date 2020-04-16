@@ -82,7 +82,19 @@ systemctl enable docker
 docker --version
 
 
+sudo su - // root access
 
+
+
+
+DAY 1
+installing DOcker
+image nginx from git hub
+createing container
+restarting docker
+changing index.html in container
+port binding while creation
+see docker process
 
 
 
