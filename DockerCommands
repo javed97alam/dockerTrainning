@@ -1,8 +1,38 @@
 
 
 
+
+
+
+	ORchestration
+
+	docker swarm init --advertise-addr 172.12.0.1
+	docker nnode ls
+
+
+=====================================================================
+Publish to docker hub
+
+docker login
+docker image ls
+docker tag myimage:latest javed97alam/firstimage:latest
+docker image ls
+docker push javed97alam/firstimage:latest
+
+
+==================================================================================
+
+DOcker file should always have name
+	
+	Dockerfile
+=====================================================================================
+
 Docker volume
+	docker volume create volume1
 	docker volume ls
+	docker container run -dt -v volume1:/personalVolume --name mycontainer1 -p 8081:80 nginx
+
+
 
 =====================================================================
 docker history myimage
